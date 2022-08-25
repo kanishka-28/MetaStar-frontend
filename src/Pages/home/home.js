@@ -5,11 +5,11 @@ import HomeLayout from '../../layout/Home.layout'
 const Home = () => {
     return (
         <HomeLayout>
-            <div className='flex flex-col items-center justify-evenly h-3/4'>
-                <div className='text-white font-semibold text-4xl w-1/2 md:px-12 text-center'>
+            <div className='flex flex-col items-center justify-evenly h-96'>
+                <div className='text-white font-semibold text-4xl md:w-3/5 md:px-12 text-center md:mt-20'>
                     Kickstart Your Journey Into the world of NFTs & Concerts!
                 </div>
-                <div>
+                <div className='md:mt-20'>
                     <Link to={'/signup'}>
                         <button className='border border-b-4 border-t-2 border-gray-300 text-gray-300 bg-black px-6 ml-10 mb-2 py-1 text-center'>GET STARTED</button>
                     </Link>

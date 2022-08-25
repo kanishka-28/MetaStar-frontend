@@ -5,6 +5,7 @@ import { AuthContextProvider} from "./context/auth/authContext";
 import axios from "axios";
 import Home from "./Pages/home/home";
 import Signup from "./Pages/auth/signup/signup";
+import Profile from "./Pages/dashboard/profileDashboard/profile";
 
 // axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.params = {};
@@ -19,10 +20,7 @@ const App = () => {
           <Route exact path="/" component={Home} /> 
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          {/* <Route exact path="/info/name" component={Name} /> */}
-          {/* <Route exact path="/info/email" component={Email} />
-          <Route exact path="/info/mobile" component={Mobile} />
-          <Route exact path="/info/thanks" component={Thanks} /> */}
+          <Route exact path="/profile" component={Profile} />
         </div>
       </AuthContextProvider>
     </Router>
