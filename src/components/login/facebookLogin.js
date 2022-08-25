@@ -26,11 +26,11 @@ function LoginFacebook() {
                     />
                 </div>
             </div> */}
-            <div onClick={ResponseSuccessfacebook} className='flex items-center cursor-pointer rounded-full shadow-lg bg-white w-56'>
-                <ImFacebook size={'2rem'} className='ml-2 pt-0.5 bg-white text-blue-500 border-8 border-blue-500 rounded-full' />
-                <div className='px-2 w-44 text-center h-10 flex items-center cursor-pointer'>
+            <div onClick={ResponseSuccessfacebook} className=''>
+                <ImFacebook size={'3rem'} className='ml-2 p-1 text-blue-500 border border-blue-400 rounded-full' />
+                {/* <div className='px-2 w-44 text-center h-10 flex items-center cursor-pointer'>
                     <p className=''>Sign in with facebook</p>
-                </div>
+                </div> */}
             </div>
         </>
     )

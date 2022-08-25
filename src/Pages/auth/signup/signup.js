@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import HomeLayout from '../../../layout/Home.layout'
 import {BsArrowLeft} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import LoginGoogle from '../../../components/login/googleLogin'
+import LoginFacebook from '../../../components/login/facebookLogin'
+import LoginTwitter from '../../../components/login/twitterLogin'
+import LoginGithub from '../../../components/login/githubLogin'
 
 const Signup = () => {
 
@@ -27,6 +31,16 @@ const Signup = () => {
                     </Link>
                     <button className='text-gray-300 border border-gray-300 px-3 py-1'>SIGNUP</button>
                 </div>
+                <div className='text-center'>
+                        <p className='text-white'>Or</p>
+                        <p className='text-white'>Sign In With</p>
+                    </div>
+                    <div className='flex gap-6 items-center justify-between'>
+                        <LoginGoogle />
+                        <LoginFacebook />
+                        <LoginTwitter />
+                        <LoginGithub />
+                    </div>
             </div>
         </HomeLayout>
     )

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BsArrowLeft } from 'react-icons/bs'
 import { Link, useHistory } from 'react-router-dom'
 import LoginFacebook from '../../../components/login/facebookLogin'
+import LoginGithub from '../../../components/login/githubLogin'
 import LoginGoogle from '../../../components/login/googleLogin'
 import LoginTwitter from '../../../components/login/twitterLogin'
 import { UserAuth } from '../../../context/auth/authContext'
@@ -33,11 +34,15 @@ const Login = () => {
                         </Link>
                         <button className='text-gray-300 border border-gray-300 px-3 py-1'>LOG IN</button>
                     </div>
-                    <p className='text-white'>Or</p>
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='text-center'>
+                        <p className='text-white'>Or</p>
+                        <p className='text-white'>Sign In With</p>
+                    </div>
+                    <div className='flex gap-6 items-center justify-between'>
                         <LoginGoogle />
-                        <br />
                         <LoginFacebook />
+                        <LoginTwitter />
+                        <LoginGithub />
                     </div>
                 </div>
             </HomeLayout>

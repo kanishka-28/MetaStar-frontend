@@ -32,7 +32,7 @@ function LoginGoogle() {
                 </div>
             </div> */}
             <div onClick={ResponseSuccessGoogle} className='flex items-center cursor-pointer rounded-full '>
-                <FcGoogle size={'2rem'} className='ml-2 text-blue-500  rounded-full' />
+                <FcGoogle size={'3rem'} className='ml-2 text-blue-500  rounded-full' />
                 {/* <div className='px-2 w-44 text-center h-10 flex items-center cursor-pointer'>
                     <p className=''>Sign in with Google</p>
                 </div> */}

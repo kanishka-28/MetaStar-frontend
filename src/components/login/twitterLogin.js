@@ -1,4 +1,5 @@
 import { AiFillTwitterCircle } from 'react-icons/ai'
+import { BsTwitter } from 'react-icons/bs';
 import { UserAuth } from '../../context/auth/authContext';
 
 function LoginTwitter() {
@@ -24,11 +25,11 @@ function LoginTwitter() {
                     />
                 </div>
             </div> */}
-            <div onClick={ResponseSuccessTwitter} className='flex items-center cursor-pointer rounded-full shadow-lg bg-white w-56'>
-                <AiFillTwitterCircle size={'2rem'} className='ml-2 pt-0 text-twitter'/>
-                <div className='px-2 w-44 text-center h-10 flex items-center cursor-pointer'>
+            <div onClick={ResponseSuccessTwitter} className=''>
+                <BsTwitter size={'3rem'} className='border border-twitter p-1 ml-2 text-twitter rounded-full'/>
+                {/* <div className='px-2 w-44 text-center h-10 flex items-center cursor-pointer'>
                     <p className=''>Sign in with Twitter</p>
-                </div>
+                </div> */}
             </div>
         </>
     )

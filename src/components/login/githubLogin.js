@@ -1,10 +1,8 @@
-import { GoogleLogin } from 'react-google-login';
-import { FcGoogle } from 'react-icons/fc'
-import { useHistory } from 'react-router-dom';
+import { ImGithub } from 'react-icons/im'
 import { UserAuth } from '../../context/auth/authContext';
 // import { Googlebutton } from 'react-google-button'
 
-function LoginGoogle() {
+function LoginGithub() {
 
     // const ResponseSuccessGoogle = async (response) => {
     //     console.log(response);
@@ -12,9 +10,9 @@ function LoginGoogle() {
    
     const {googleSignIn} = UserAuth();
 
-    const ResponseSuccessGoogle = async (response) => {
+    const ResponseSuccessGithub = async (response) => {
         try {
-            await googleSignIn()
+            // await googleSignIn()
         } catch (error) {
             console.log(error);
         }
@@ -31,8 +29,8 @@ function LoginGoogle() {
                     />
                 </div>
             </div> */}
-            <div onClick={ResponseSuccessGoogle} className='flex items-center cursor-pointer rounded-full '>
-                <FcGoogle size={'2rem'} className='ml-2 text-blue-500  rounded-full' />
+            <div onClick={ResponseSuccessGithub} className='flex items-center cursor-pointer rounded-full '>
+                <ImGithub size={'3rem'} className='ml-2 border border-gray-300 bg-white text-black-500  rounded-full' />
                 {/* <div className='px-2 w-44 text-center h-10 flex items-center cursor-pointer'>
                     <p className=''>Sign in with Google</p>
                 </div> */}
@@ -41,4 +39,4 @@ function LoginGoogle() {
     )
 }
 
-export default LoginGoogle;
+export default LoginGithub;
