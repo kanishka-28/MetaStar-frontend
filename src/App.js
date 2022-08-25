@@ -1,33 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Login from "./Pages/login";
-import Name from "./Pages/information/name";
-import Email from "./Pages/information/email";
-import Mobile from "./Pages/information/mobile";
-import Thanks from "./Pages/information/thanks";
-import { AuthContextProvider, UserAuth} from "./context/auth/authContext";
+import Login from "./Pages/auth/login/login";
+import { AuthContextProvider} from "./context/auth/authContext";
 import axios from "axios";
-import { auth } from "./firebase";
+import Home from "./Pages/home/home";
+import Signup from "./Pages/auth/signup/signup";
 
 // axios.defaults.baseURL = 'http://localhost:4000';
-axios.defaults.baseURL = 'https://yaapbackend.herokuapp.com';
 axios.defaults.params = {};
 
 
 const App = () => {
-  
-  // useEffect(() => {
-  //   console.log(auth?.currentUser?.accessToken);
-  // }, []); 
 
-  const [isLogin, setisLogin] = useState(false)
   return (
     <Router>
       <AuthContextProvider>
         <div>
-          <Route exact path="/name" component={Name} /> 
-          <Route exact path="/" component={Login} />
-          
+          <Route exact path="/" component={Home} /> 
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
           {/* <Route exact path="/info/name" component={Name} /> */}
           {/* <Route exact path="/info/email" component={Email} />
           <Route exact path="/info/mobile" component={Mobile} />
