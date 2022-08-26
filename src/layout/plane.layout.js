@@ -1,12 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Navbar from '../components/navbar/navbar'
 
 const PlaneLayout = (props) => {
     return (
-        <div className='h-screen sm:flex'>
-            <div className='bg-black w-full'>
+        <div className='min-h-screen bg-black'>
+            <Navbar />
+            <div className='px-20'>
                 {props.children}
             </div>
+            <br />
         </div>
     )
 }

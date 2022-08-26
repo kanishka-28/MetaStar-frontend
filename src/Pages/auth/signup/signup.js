@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import HomeLayout from '../../../layout/Home.layout'
 import {BsArrowLeft} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import LoginGoogle from '../../../components/login/googleLogin'
 import LoginFacebook from '../../../components/login/facebookLogin'
 import LoginTwitter from '../../../components/login/twitterLogin'
 import LoginGithub from '../../../components/login/githubLogin'
+import PlaneLayout from '../../../layout/plane.layout'
 
 const Signup = () => {
 
@@ -16,7 +16,7 @@ const Signup = () => {
 
 
     return (
-        <HomeLayout>
+        <PlaneLayout>
             <div className='flex flex-col items-center gap-10 mt-16'>
                 <p className='text-white text-3xl text-center '>Let’s get you onboard! Sign up below</p>
                 <div>
@@ -42,7 +42,7 @@ const Signup = () => {
                         <LoginGithub />
                     </div>
             </div>
-        </HomeLayout>
+        </PlaneLayout>
     )
 }
 

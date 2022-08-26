@@ -7,7 +7,7 @@ import LoginGoogle from '../../../components/login/googleLogin'
 import LoginTwitter from '../../../components/login/twitterLogin'
 import { UserAuth } from '../../../context/auth/authContext'
 import { auth } from '../../../firebase'
-import HomeLayout from '../../../layout/Home.layout'
+import PlaneLayout from '../../../layout/plane.layout'
 
 const Login = () => {
 
@@ -21,7 +21,7 @@ const Login = () => {
 
     return (
         <>
-            <HomeLayout>
+            <PlaneLayout>
                 <div className='flex flex-col items-center gap-10 mt-16'>
                     <p className='text-white text-3xl text-center '>Welcome back! Sign in below</p>
                     <div>
@@ -45,7 +45,7 @@ const Login = () => {
                         <LoginGithub />
                     </div>
                 </div>
-            </HomeLayout>
+            </PlaneLayout>
         </>
     )
 }
