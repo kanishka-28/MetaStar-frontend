@@ -4,6 +4,8 @@ import HomeLayout from '../../layout/Home.layout'
 import arrow from '../../assets/images/downArrow.png';
 import NFTCarousel from '../../components/carousel/NFTCarousel';
 import ConcertCarousel from '../../components/carousel/concertsCarousel.js';
+import NFT from '../../components/docs/NFT';
+import AboutUs from '../../components/docs/aboutUs';
 
 const Docs = () => {
     return (
@@ -22,6 +24,8 @@ const Docs = () => {
                     </div>
                     <NFTCarousel />
                     <ConcertCarousel />
+                    <NFT/>
+                    <AboutUs/>
                 </div>
             </div>
         </HomeLayout>
