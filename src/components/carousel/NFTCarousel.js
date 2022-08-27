@@ -162,7 +162,7 @@ const Laptop = () => {
         </Slider>
       </div>
     </>
-
+     
   )
 }
 
