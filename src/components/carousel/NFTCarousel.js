@@ -166,7 +166,7 @@ const Laptop = () => {
   )
 }
 
-const Permaweb = () => {
+const NFTCarousel = () => {
   return (
     <>
       <div className="mx-8 md:px-28">
@@ -179,4 +179,4 @@ const Permaweb = () => {
   );
 };
 
-export default Permaweb;
+export default NFTCarousel;
