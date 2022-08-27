@@ -6,12 +6,13 @@ import NFTCarousel from '../../components/carousel/NFTCarousel';
 import ConcertCarousel from '../../components/carousel/concertsCarousel.js';
 import NFT from '../../components/docs/NFT';
 import AboutUs from '../../components/docs/aboutUs';
+import Permaweb from '../../components/carousel/permaweb';
 
 const Docs = () => {
     return (
         <HomeLayout>
             <div className='flex flex-col items-center justify-evenly'>
-                <div className='text-white font-semibold text-4xl md:w-3/5 md:px-12 text-center mt-10 md:mt-20'>
+                <div className='text-white font-semibold text-4xl md:w-3/5 md:px-12 text-center mt-10 md:mt-16'>
                     Kickstart Your Journey Into the world of NFTs & Concerts!
                 </div>
                 <div className='mt-20 flex flex-col items-center'>
@@ -23,11 +24,14 @@ const Docs = () => {
                         Enter the new age of digital
                     </div>
                 </div>
-                    <NFTCarousel />
-                    <ConcertCarousel />
-                    <NFT/>
-                    <AboutUs/>
             </div>
+            <div className='mt-20 mx-4 md:mx-28'>
+                <NFTCarousel />
+                <ConcertCarousel />
+            </div>
+            <NFT />
+            <AboutUs />
+            <Permaweb />
         </HomeLayout>
     )
 }

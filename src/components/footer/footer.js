@@ -3,7 +3,7 @@ import logoMeta from '../../assets/images/metaLogo.png'
 
 const Footer = () => {
     return (
-        <div className='pb-10 '>
+        <div className='pb-1'>
             <div className='flex justify-evenly'>
                 <div className='flex flex-col gap-2 justify-center'>
                     <img src={logoMeta} className='w-20' />

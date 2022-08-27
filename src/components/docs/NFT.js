@@ -15,7 +15,7 @@ const NFT = () => {
                 </div>
             </div>
                 <br /><br />
-            <h1 className='font-semibold text-4xl md:w-3/5 md:px-12 mt-6 mb-2 text-white mb-80 px-2'>
+            <h1 className='font-semibold text-4xl md:px-40 mt-6 mb-2 text-white mb-80 px-2'>
                 NFTs can be activated in various formats, according to the brand's preferences and targets.
             </h1>
         </>
