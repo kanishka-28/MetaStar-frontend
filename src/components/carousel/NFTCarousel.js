@@ -150,7 +150,7 @@ const Laptop = () => {
 
   const settingsLg = {
     arrows: true,
-    // autoplay: true,
+    autoplay: true,
     // centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 1,
