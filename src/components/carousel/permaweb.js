@@ -65,8 +65,8 @@ const Mobile = () => {
                     alt="image"
                     className="w-80 h-36 rounded pb-2"
                   />
-                  <p className="text-white text-lg text-semibold">{data.heading}</p>
-                  <p className="text-white text-gray-500">{data.text}</p>
+                  <p className="text-white text-lg text-semibold">{data?.heading?.slice(0,100)}</p>
+                  <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
                 <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
               </div>
@@ -107,8 +107,8 @@ const Tablet = () => {
                       alt="image"
                       className="w-80 h-36 rounded pb-2"
                     />
-                    <p className="text-white text-lg text-semibold">{data.heading}</p>
-                    <p className="text-white text-gray-500">{data.text}</p>
+                    <p className="text-white text-lg text-semibold">{data?.heading?.slice(0,100)}</p>
+                    <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
                   </div>
                   <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
@@ -137,39 +137,37 @@ const Laptop = () => {
   }
   return (
     <>
-
       <div className="">
         <Slider {...settingsLg}>
           {
             images.map((data, i) => (
               <div key={i} className='px-8'>
-                <div className='p-4 border border-white border-r-4 border-b-4 outline-0 h-min-96 flex  flex-col justify-between'>
+                <div className='p-4 h-96 border border-white border-r-4 border-b-4 outline-0 h-min-96 flex  flex-col justify-between'>
                   <div>
                     <img
                       src={data.image}
                       alt="image"
                       className="w-80 h-36 rounded pb-2"
                     />
-                    <p className="text-white text-lg text-semibold">{data.heading}</p>
-                    <p className="text-white text-gray-500">{data.text}</p>
+                    <p className="text-white text-lg text-semibold">{data?.heading?.slice(0,100)}</p>
+                    <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
                   </div>
                   <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
               </div>
             ))
           }
-
         </Slider>
       </div>
     </>
-
+     
   )
 }
 
-const Permaweb = () => {
+const NFTCarousel = () => {
   return (
     <>
-      <div className="mx-8 md:px-28">
+      <div className="mx-8">
         <p className="mx-8 my-12 text-white text-4xl">Explore the permaweb</p>
         <div className="md:hidden"><Mobile /></div>
         <div className="hidden md:block lg:hidden"><Tablet /></div>
@@ -179,4 +177,5 @@ const Permaweb = () => {
   );
 };
 
-export default Permaweb;
+export default NFTCarousel;
+

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import HomeLayout from '../../layout/Home.layout'
 import arrow from '../../assets/images/downArrow.png';
 import NFTCarousel from '../../components/carousel/NFTCarousel';
-import ConcertCarousel from '../../components/carousel/concertsCarousel.js';
 import NFT from '../../components/docs/NFT';
 import AboutUs from '../../components/docs/aboutUs';
 import Permaweb from '../../components/carousel/permaweb';
@@ -27,11 +26,12 @@ const Docs = () => {
             </div>
             <div className='mt-20 mx-4 md:mx-28'>
                 <NFTCarousel />
-                <ConcertCarousel />
             </div>
             <NFT />
             <AboutUs />
-            <Permaweb />
+            <div className='mt-20 mx-4 md:mx-28'>
+                <Permaweb />
+            </div>
         </HomeLayout>
     )
 }

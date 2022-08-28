@@ -3,7 +3,7 @@ import { NextArrow, PrevArrow } from "./Arrows.component";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import image1 from "../../assets/images/image-1.png"
+import image1 from "../../assets/images/faceImage.png"
 
 
 const images = [
@@ -27,16 +27,16 @@ const images = [
     heading: "Linktree is rolling out new features to allow creators showcase their NFTs",
     text: "Link-in-bio platform Linktree is the latest company that is looking to integrate NFTs into its service",
   },
-  {
-    image: image1,
-    heading: "How Gen Z is hooked on the cryptocurrency & NFTs",
-    text: "The lure of making a quick buck has always attracted young people to invest in risky assets. For Generation Z, it is the volatility - and the decentralised nature",
-  },
-  {
-    image: image1,
-    heading: "Linktree is rolling out new features to allow creators showcase their NFTs",
-    text: "Link-in-bio platform Linktree is the latest company that is looking to integrate NFTs into its service",
-  },
+  // {
+  //   image: image1,
+  //   heading: "How Gen Z is hooked on the cryptocurrency & NFTs",
+  //   text: "The lure of making a quick buck has always attracted young people to invest in risky assets. For Generation Z, it is the volatility - and the decentralised nature",
+  // },
+  // {
+  //   image: image1,
+  //   heading: "Linktree is rolling out new features to allow creators showcase their NFTs",
+  //   text: "Link-in-bio platform Linktree is the latest company that is looking to integrate NFTs into its service",
+  // },
 ]
 
 const Mobile = () => {
@@ -65,8 +65,8 @@ const Mobile = () => {
                     alt="image"
                     className="w-80 h-36 rounded pb-2"
                   />
-                  <p className="text-white text-lg text-semibold">{data.heading}</p>
-                  <p className="text-white text-gray-500">{data.text}</p>
+                  <p className="text-white text-lg text-semibold">{data?.heading?.slice(0,100)}</p>
+                  <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
                 <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
               </div>
@@ -107,8 +107,8 @@ const Tablet = () => {
                       alt="image"
                       className="w-80 h-36 rounded pb-2"
                     />
-                    <p className="text-white text-lg text-semibold">{data.heading}</p>
-                    <p className="text-white text-gray-500">{data.text}</p>
+                    <p className="text-white text-lg text-semibold">{data?.heading?.slice(0,100)}</p>
+                    <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
                   </div>
                   <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
@@ -137,28 +137,26 @@ const Laptop = () => {
   }
   return (
     <>
-
       <div className="">
         <Slider {...settingsLg}>
           {
             images.map((data, i) => (
               <div key={i} className='px-8'>
-                <div className='p-4 border border-white border-r-4 border-b-4 outline-0 h-min-96 flex  flex-col justify-between'>
+                <div className='h-96 border rounded-lg border-white '>
                   <div>
                     <img
                       src={data.image}
                       alt="image"
-                      className="w-80 h-36 rounded pb-2"
+                      className="w-64 h-80 rounded"
                     />
-                    <p className="text-white text-lg text-semibold">{data.heading}</p>
-                    <p className="text-white text-gray-500">{data.text}</p>
+                    <p className="text-white text-lg text-semibold">{i} {data?.heading?.slice(0,100)}</p>
+                    <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
                   </div>
                   <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
               </div>
             ))
           }
-
         </Slider>
       </div>
     </>
@@ -169,10 +167,10 @@ const Laptop = () => {
 const NFTCarousel = () => {
   return (
     <>
-      <div className="mx-8 md:px-28">
+      <div className="mx-8">
         <p className="mx-8 my-12 text-white text-4xl">Explore the permaweb</p>
-        <div className="md:hidden"><Mobile /></div>
-        <div className="hidden md:block lg:hidden"><Tablet /></div>
+        {/* <div className="md:hidden"><Mobile /></div>
+        <div className="hidden md:block lg:hidden"><Tablet /></div> */}
         <div className="hidden lg:block"><Laptop /></div>
       </div>
     </>
@@ -180,3 +178,4 @@ const NFTCarousel = () => {
 };
 
 export default NFTCarousel;
+
