@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import image1 from "../../assets/images/faceImage.png"
-
+import { MdOutlineQrCode2 } from "react-icons/md"
+import { CgHashtag } from "react-icons/cg"
 
 const images = [
   {
@@ -58,21 +59,33 @@ const Mobile = () => {
         <Slider {...settingsmb}>
           {
             images.map((data, i) => (
-              <div key={i} className='px-8 '>
-                <div className='p-4 border border-white border-r-4 border-b-4 outline-0 h-96 h-min-96 flex  flex-col justify-between'>
+              <div key={i} className='px-10'>
+                <div className="border border-white rounded-lg">
                   <img
                     src={data.image}
                     alt="image"
-                    className="w-80 h-36 rounded pb-2"
+                    className="w-full h-96 rounded"
                   />
-                  <p className="text-white text-lg text-semibold">{data?.heading?.slice(0,100)}</p>
-                  <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
-                <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
+                  <div className="flex justify-between ml-2 mb-1 flex-wrap">
+                    <div className="flex flex-col gap-1">
+                      <h1 className="text-white text-lg">Ralph Edwards</h1>
+                      <p className="text-gray-300 text-xxs">Mother Nature</p>
+                      <p className="text-gray-300 text-xxs">Mother Nature, she does what she wants.</p>
+                      <div>
+                        <p className="text-gray-500 text-xxs">07.13.2022 Machine</p>
+                        <p className="text-gray-500 text-xxs">elmt.no.202207130309</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center w- text-white">
+                      <CgHashtag size={'4rem'} className="m-0 p-0" />
+                      <p className="text-bold text-6xl">2</p>
+                      <MdOutlineQrCode2 size={'4rem'} />
+                    </div>
+                  </div>
                 </div>
               </div>
             ))
           }
-
         </Slider>
       </div>
     </>
@@ -99,23 +112,33 @@ const Tablet = () => {
         <Slider {...settingsMd}>
           {
             images.map((data, i) => (
-              <div key={i} className='px-2'>
-                <div className='p-4 border border-white border-r-4 border-b-4 outline-0 h-min-96 flex  flex-col justify-between'>
-                  <div>
-                    <img
-                      src={data.image}
-                      alt="image"
-                      className="w-80 h-36 rounded pb-2"
-                    />
-                    <p className="text-white text-lg text-semibold">{data?.heading?.slice(0,100)}</p>
-                    <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
+              <div key={i} className='px-10'>
+                <div className="border border-white rounded-lg">
+                  <img
+                    src={data.image}
+                    alt="image"
+                    className="w-full h-96 rounded"
+                  />
+                  <div className="flex justify-between ml-2 mb-1 flex-wrap">
+                    <div className="flex flex-col gap-1">
+                      <h1 className="text-white text-lg">Ralph Edwards</h1>
+                      <p className="text-gray-300 text-xxs">Mother Nature</p>
+                      <p className="text-gray-300 text-xxs">Mother Nature, she does what she wants.</p>
+                      <div>
+                        <p className="text-gray-500 text-xxs">07.13.2022 Machine</p>
+                        <p className="text-gray-500 text-xxs">elmt.no.202207130309</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center w- text-white">
+                      <CgHashtag size={'4rem'} className="m-0 p-0" />
+                      <p className="text-bold text-6xl">2</p>
+                      <MdOutlineQrCode2 size={'4rem'} />
+                    </div>
                   </div>
-                  <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
               </div>
             ))
           }
-
         </Slider>
       </div>
     </>
@@ -127,7 +150,7 @@ const Laptop = () => {
 
   const settingsLg = {
     arrows: true,
-    autoplay: true,
+    // autoplay: true,
     // centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -141,18 +164,29 @@ const Laptop = () => {
         <Slider {...settingsLg}>
           {
             images.map((data, i) => (
-              <div key={i} className='px-8'>
-                <div className='h-96 border rounded-lg border-white '>
-                  <div>
-                    <img
-                      src={data.image}
-                      alt="image"
-                      className="w-64 h-80 rounded"
-                    />
-                    <p className="text-white text-lg text-semibold">{i} {data?.heading?.slice(0,100)}</p>
-                    <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
+              <div key={i} className='px-10'>
+                <div className="border border-white rounded-lg">
+                  <img
+                    src={data.image}
+                    alt="image"
+                    className="w-full h-96 rounded"
+                  />
+                  <div className="flex justify-between ml-2 mb-1 flex-wrap">
+                    <div className="flex flex-col gap-1">
+                      <h1 className="text-white text-lg">Ralph Edwards</h1>
+                      <p className="text-gray-300 text-xxs">Mother Nature</p>
+                      <p className="text-gray-300 text-xxs">Mother Nature, she does what she wants.</p>
+                      <div>
+                        <p className="text-gray-500 text-xxs">07.13.2022 Machine</p>
+                        <p className="text-gray-500 text-xxs">elmt.no.202207130309</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center w- text-white">
+                      <CgHashtag size={'4rem'} className="m-0 p-0" />
+                      <p className="text-bold text-6xl">2</p>
+                      <MdOutlineQrCode2 size={'4rem'} />
+                    </div>
                   </div>
-                  <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
               </div>
             ))
@@ -160,7 +194,7 @@ const Laptop = () => {
         </Slider>
       </div>
     </>
-     
+
   )
 }
 
@@ -168,9 +202,10 @@ const NFTCarousel = () => {
   return (
     <>
       <div className="mx-8">
-        <p className="mx-8 my-12 text-white text-4xl">Explore the permaweb</p>
-        {/* <div className="md:hidden"><Mobile /></div>
-        <div className="hidden md:block lg:hidden"><Tablet /></div> */}
+        <p className="mx-10 my-3 text-gray-500"><span className="text-white text-2xl">NFT's </span>• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <hr className='class="border border-gray-700 my-4 mx-10' />
+        <div className="md:hidden"><Mobile /></div>
+        <div className="hidden md:block lg:hidden"><Tablet /></div>
         <div className="hidden lg:block"><Laptop /></div>
       </div>
     </>

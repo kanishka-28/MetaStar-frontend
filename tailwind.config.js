@@ -7,6 +7,9 @@ module.exports = {
         'linkedin': '#0e76a8',
         'facebook': '#4267B2',
         'twitter': '#1DA1F2',
+      },
+      fontSize: {
+        'xxs': '.50em',
       }
     },
   },
