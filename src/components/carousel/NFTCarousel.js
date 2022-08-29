@@ -158,6 +158,7 @@ const Laptop = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />
   }
+  
   return (
     <>
       <div className="">

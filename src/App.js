@@ -30,7 +30,7 @@ const App = () => {
         </div>
       </AuthContextProvider>
     </Router>
-  )
+  ) 
 }
 
 export default App
