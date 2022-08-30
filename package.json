@@ -5,7 +5,7 @@
   "proxy": "http://localhost:4000/",
   "dependencies": {
     "@craco/craco": "^6.4.0",
-    "@headlessui/react": "^1.4.1",
+    "@headlessui/react": "^1.6.6",
     "@passbase/button": "^4.2.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
