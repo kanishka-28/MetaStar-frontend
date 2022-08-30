@@ -9,6 +9,7 @@ import Profile from "./Pages/dashboard/profileDashboard/profile";
 import Metaverse from "./Pages/dashboard/allThree/metaverse";
 import Artistverse from "./Pages/dashboard/allThree/artistverse";
 import Docs from "./Pages/home/docs";
+import MarketPlace from "./Pages/dashboard/allThree/marketplace";
 
 // axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.params = {};
@@ -27,6 +28,7 @@ const App = () => {
           <Route exact path="/dashboard/profile" component={Profile} />
           <Route exact path="/dashboard/metaverse" component={Metaverse} />
           <Route exact path="/dashboard/artistverse" component={Artistverse} />
+          <Route exact path="/dashboard/market" component={MarketPlace} />
         </div>
       </AuthContextProvider>
     </Router>

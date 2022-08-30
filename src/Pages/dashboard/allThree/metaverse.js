@@ -1,12 +1,12 @@
 import React from 'react'
-import HomeLayout from '../../../layout/Home.layout';
 import { BiLogOut } from 'react-icons/bi';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { BsArrowLeft } from 'react-icons/bs';
+import PlaneLayout from '../../../layout/plane.layout';
 
 const Metaverse = () => {
     return (
-        <HomeLayout>
+        <PlaneLayout>
             <div>
                 <div className='w-full flex justify-between items-center '>
                     <div className='text-white text-xl mb-2 mt-10 flex items-center gap-2'>
@@ -32,7 +32,7 @@ const Metaverse = () => {
                     <div className='text-center border border-gray-400 w-80 lg:w-96 h-56 text-gray-300 mb-4'></div>
                 </div>
             </div>
-        </HomeLayout>
+        </PlaneLayout>
     )
 }
 

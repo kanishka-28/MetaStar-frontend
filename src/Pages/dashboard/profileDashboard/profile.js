@@ -1,11 +1,11 @@
 import React from 'react'
-import HomeLayout from '../../../layout/Home.layout';
 import { BiLogOut } from 'react-icons/bi';
 import { IoSettingsOutline } from 'react-icons/io5';
+import PlaneLayout from '../../../layout/plane.layout';
 
 const Profile = () => {
     return (
-        <HomeLayout>
+        <PlaneLayout>
             <div>
                 <div className='w-full flex justify-between items-center '>
                     <p className='text-white text-xl mb-2 mt-10'>Hey, Shubhransh</p>
@@ -21,7 +21,7 @@ const Profile = () => {
                 </div><br />
                 <h2 className='text-white font-semibold text-xl'>Your Daily Statistics</h2>
             </div>
-        </HomeLayout>
+        </PlaneLayout>
     )
 }
 
