@@ -9,11 +9,11 @@ const Home = () => {
                 <div className='text-white font-semibold text-4xl md:w-3/5 md:px-12 text-center md:mt-16'>
                     Kickstart Your Journey Into the world of NFTs & Concerts!
                 </div>
-                <div className='md:mt-20'>
+                <div className='md:mt-20  flex justify-center flex-col items-center'>
                     <Link to={'/signup'}>
-                        <button className='border border-b-4 border-t-2 border-gray-300 text-gray-300 bg-black px-6 ml-10 mb-2 py-1 text-center'>GET STARTED</button>
+                        <button className='border border-b-4 border-t-2 border-gray-300 text-gray-300 bg-black px-6  mb-2 py-1 text-center'>GET STARTED</button>
                     </Link>
-                    <p className='text-gray-600'>Already on our platform? <span className='text-gray-300'><Link to={'/login'}>Log In</Link></span></p>
+                    <p className='text-gray-600 text-center'>Already on our platform? <span className='text-gray-300'><Link to={'/login'}>Log In</Link></span></p>
                 </div>
             </div>
         </PlaneLayout>

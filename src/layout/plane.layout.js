@@ -5,7 +5,7 @@ const PlaneLayout = (props) => {
     return (
         <div className='min-h-screen bg-black'>
             <Navbar />
-            <div className='px-20'>
+            <div className='sm:px-20'>
                 {props.children}
             </div>
             <br />

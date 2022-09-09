@@ -59,7 +59,7 @@ const Mobile = () => {
         <Slider {...settingsmb}>
           {
             images.map((data, i) => (
-              <div key={i} className='px-10'>
+              <div key={i} className='px-0 sm:px-10'>
                 <div className="border border-white rounded-lg">
                   <img
                     src={data.image}
