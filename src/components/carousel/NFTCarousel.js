@@ -146,7 +146,7 @@ const Tablet = () => {
   )
 }
 
-const Laptop = () => {
+const Laptop = ({number}) => {
 
   const settingsLg = {
     arrows: true,
@@ -158,7 +158,7 @@ const Laptop = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />
   }
-  
+
   return (
     <>
       <div className="">
@@ -199,15 +199,20 @@ const Laptop = () => {
   )
 }
 
-const NFTCarousel = () => {
+const NFTCarousel = ({ number }) => {
   return (
     <>
-      <div className="mx-8">
-        <p className="mx-10 my-3 text-gray-500"><span className="text-white text-2xl">NFT's </span>• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div className={number==4?"mx-0":"mx-"}>
+        {number == 4 ?
+          <span className="text-white font-semibold text-3xl">Featured Items</span>
+          :
+          <p className="mx-10 my-3 text-gray-500"><span className="text-white text-2xl">NFT's </span>• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        }
+
         <hr className='class="border border-gray-700 my-4 mx-10' />
         <div className="md:hidden"><Mobile /></div>
         <div className="hidden md:block lg:hidden"><Tablet /></div>
-        <div className="hidden lg:block"><Laptop /></div>
+        <div className="hidden lg:block"><Laptop number={number}/></div>
       </div>
     </>
   );

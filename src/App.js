@@ -10,6 +10,7 @@ import Metaverse from "./Pages/dashboard/allThree/metaverse";
 import Artistverse from "./Pages/dashboard/allThree/artistverse";
 import Docs from "./Pages/home/docs";
 import MarketPlace from "./Pages/dashboard/allThree/marketplace";
+import MarketPlace2 from "./Pages/dashboard/allThree/marketplace copy";
 
 // axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.params = {};

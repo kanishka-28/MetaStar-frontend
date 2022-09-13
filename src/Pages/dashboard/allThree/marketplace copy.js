@@ -5,7 +5,10 @@ import { BsArrowLeft } from 'react-icons/bs';
 import PlaneLayout from '../../../layout/plane.layout';
 import SideAccordion from '../../../components/accordion/sideAccordion';
 import NFTCarousel from '../../../components/carousel/NFTCarousel';
+import Card from '../../../components/card/card';
 
+
+const arr = [1, 2, 3, 4, 5];
 const MarketPlace2 = () => {
     return (
         <PlaneLayout>
@@ -27,11 +30,16 @@ const MarketPlace2 = () => {
                     <p className='cursor-pointer '>Users</p>
                 </div>
                 <br />
-                <h1>Featured Ttems</h1>
-                <NFTCarousel/>
+                <NFTCarousel number={4} />
+                <h1 className='text-white mt-12 font-semibold text-3xl'>Explore Collections</h1>
+                <div className='flex flex-wrap justify-between'>
+                    {arr?.map((data) => (
+                        <Card />
+                    ))}
+                </div>
             </div>
         </PlaneLayout>
     )
 }
 
-export default MarketPlace;
+export default MarketPlace2;

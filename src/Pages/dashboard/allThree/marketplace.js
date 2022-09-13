@@ -4,6 +4,7 @@ import { IoSettingsOutline } from 'react-icons/io5';
 import { BsArrowLeft } from 'react-icons/bs';
 import PlaneLayout from '../../../layout/plane.layout';
 import SideAccordion from '../../../components/accordion/sideAccordion';
+import data from './acrdionDummyData';
 
 const MarketPlace = () => {
     return (
@@ -28,7 +29,7 @@ const MarketPlace = () => {
                 <br />
                 <div className='flex justify-between'>
                     <div className=''>
-                        
+                        <SideAccordion data={data}/>         
                     </div>
                     <div className='w-full md:w-3/4 flex flex-wrap justify-evenly'>
                         <div className='text-center border border-gray-400 w-60 h-72 text-gray-300 mb-4'></div>
