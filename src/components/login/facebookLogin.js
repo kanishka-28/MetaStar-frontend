@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { ImFacebook } from 'react-icons/im'
 import { useHistory } from 'react-router-dom';
 import { UserAuth } from '../../context/auth/authContext';
@@ -5,11 +6,18 @@ import { UserAuth } from '../../context/auth/authContext';
 function LoginFacebook() {
 
     const {facebookSignIn} = UserAuth();
+    const history = useHistory();
+    const { user } = UserAuth();
+
+    useEffect(() => {
+        if(user?.email){
+            history.push('/')
+        }
+    }, [user?.email])
 
     const ResponseSuccessfacebook = async (response) => {
         try {
             await facebookSignIn()
-            console.log(response);
         } catch (error) {
             console.log(error);
         }
@@ -27,7 +35,7 @@ function LoginFacebook() {
                 </div>
             </div> */}
             <div onClick={ResponseSuccessfacebook} className=''>
-                <ImFacebook size={'3rem'} className='ml-2 p-1 text-blue-500 border border-blue-400 rounded-full' />
+                <ImFacebook size={'3rem'} className='cursor-pointer ml-2 p-1 text-blue-500 border border-blue-400 rounded-full' />
                 {/* <div className='px-2 w-44 text-center h-10 flex items-center cursor-pointer'>
                     <p className=''>Sign in with facebook</p>
                 </div> */}

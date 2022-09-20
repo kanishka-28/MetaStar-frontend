@@ -11,6 +11,7 @@ export const AuthContextProvider = ({ children }) => {
     displayName: '',
     email: '',
   })
+  
   const [isLogin, setIsLogin] = useState(false);
 
   const googleSignIn = () => {

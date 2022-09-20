@@ -14,12 +14,12 @@ const Profile = () => {
                 <hr className='class="border border-gray-700 cursor-pointer hover:border-red-500 duration-500"' />
                 <br />
                 <br />
-                <div className='flex flex-wrap justify-between'>
+                <div className='flex flex-wrap justify-center gap-4'>
                     <div className='text-center border border-gray-400 w-80 lg:w-96 h-56 text-gray-300 mb-4'>Metaverse</div>
                     <div className='text-center border border-gray-400 w-80 lg:w-96 h-56 text-gray-300 mb-4'>artistverse</div>
                     <div className='text-center border border-gray-400 w-80 lg:w-96 h-56 text-gray-300 mb-4'>nft marketplace</div>
                 </div><br />
-                <h2 className='text-white font-semibold text-xl'>Your Daily Statistics</h2>
+                <h2 className='text-white text-center sm:text-left font-semibold text-xl'>Your Daily Statistics</h2>
             </div>
         </PlaneLayout>
     )

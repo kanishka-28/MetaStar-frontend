@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { GoogleLogin } from 'react-google-login';
 import { FcGoogle } from 'react-icons/fc'
 import { useHistory } from 'react-router-dom';
@@ -11,10 +12,18 @@ function LoginGoogle() {
     // }
    
     const {googleSignIn} = UserAuth();
+    const history = useHistory();
+    const { user } = UserAuth();
 
+    useEffect(() => {
+        if(user?.email){
+            history.push('/')
+        }
+    }, [user?.email])
+    
     const ResponseSuccessGoogle = async (response) => {
         try {
-            await googleSignIn()
+            await googleSignIn();
         } catch (error) {
             console.log(error);
         }

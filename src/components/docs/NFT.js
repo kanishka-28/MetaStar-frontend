@@ -7,7 +7,7 @@ const NFT = () => {
                 <h1 className='font-semibold text-3xl mb-2'>What’s an NFT?</h1>
                 <p className='text-lg text-gray-400'>A digital asset registered on the blockchain. NFTs can take on different forms, such as art, collectibles, digital fashion, etc. NFTs guarantee provenance, ownership, tradability and scarcity, providing asset holders with various utilities and experiences.</p>
                 <br /><br />
-                <div className='flex flex-wrap mx-auto justify-between gap-4'>
+                <div className='flex flex-wrap mx-auto justify-center gap-4'>
                     <div className='rounded border border-black w-44 h-56'></div>
                     <div className='rounded border border-black w-44 h-56'></div>
                     <div className='rounded border border-black w-44 h-56'></div>

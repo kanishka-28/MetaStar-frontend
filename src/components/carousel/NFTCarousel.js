@@ -59,7 +59,7 @@ const Mobile = () => {
         <Slider {...settingsmb}>
           {
             images.map((data, i) => (
-              <div key={i} className='px-10'>
+              <div key={i} className='px-0 sm:px-10'>
                 <div className="border border-white rounded-lg">
                   <img
                     src={data.image}
@@ -146,7 +146,7 @@ const Tablet = () => {
   )
 }
 
-const Laptop = ({number}) => {
+const Laptop = ({ number }) => {
 
   const settingsLg = {
     arrows: true,
@@ -202,7 +202,7 @@ const Laptop = ({number}) => {
 const NFTCarousel = ({ number }) => {
   return (
     <>
-      <div className={number==4?"mx-0":"mx-"}>
+      <div className={number == 4 ? "mx-0" : "mx-"}>
         {number == 4 ?
           <span className="text-white font-semibold text-3xl">Featured Items</span>
           :
@@ -210,9 +210,9 @@ const NFTCarousel = ({ number }) => {
         }
 
         <hr className='class="border border-gray-700 my-4 mx-10' />
-        <div className="md:hidden"><Mobile /></div>
-        <div className="hidden md:block lg:hidden"><Tablet /></div>
-        <div className="hidden lg:block"><Laptop number={number}/></div>
+        <div className="md:hidden mx-10  mb-10"><Mobile /></div>
+        <div className="hidden md:block lg:hidden mb-10"><Tablet /></div>
+        <div className="hidden lg:block mb-10"><Laptop number={number} /></div>
       </div>
     </>
   );

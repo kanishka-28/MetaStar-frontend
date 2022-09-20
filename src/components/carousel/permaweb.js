@@ -58,7 +58,7 @@ const Mobile = () => {
         <Slider {...settingsmb}>
           {
             images.map((data, i) => (
-              <div key={i} className='px-8 '>
+              <div key={i} className='sm:px-8 '>
                 <div className='p-4 border border-white border-r-4 border-b-4 outline-0 h-96 h-min-96 flex  flex-col justify-between'>
                   <img
                     src={data.image}
@@ -66,7 +66,7 @@ const Mobile = () => {
                     className="w-80 h-36 rounded pb-2"
                   />
                   <p className="text-white text-lg text-semibold">{data?.heading?.slice(0,100)}</p>
-                  <p className="text-white text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
+                  <p className=" text-gray-500">{data?.text?.slice(0,100)+"..."}</p>
                 <button className='text-gray-300 border border-b-4 border-gray-300 px-3 py-1 w-32'>READ MORE</button>
                 </div>
               </div>
@@ -168,7 +168,7 @@ const NFTCarousel = () => {
   return (
     <>
       <div className="mx-8">
-        <p className="mx-8 my-12 text-white text-4xl">Explore the permaweb</p>
+        <p className="sm:mx-8 my-12 text-white text-4xl">Explore the permaweb</p>
         <div className="md:hidden"><Mobile /></div>
         <div className="hidden md:block lg:hidden"><Tablet /></div>
         <div className="hidden lg:block"><Laptop /></div>

@@ -4,13 +4,15 @@ import { auth } from '../../firebase'
 import Docs from './docs'
 import Landing from './landing'
 
-const Home = () => {
+const Home = () => { 
 
+    const {user} = UserAuth();
+    console.log(user?.email);
     
     return (
         <>
-            {/* {auth ? <Docs/> : <Landing/>} */}
-            <Landing/>
+            {user?.email ? <Docs/> : <Landing/>}
+            {/* <Landing/> */}
         </>
     )
 }
