@@ -15,7 +15,7 @@ const Docs = () => {
                     Kickstart Your Journey Into the world of NFTs & Concerts!
                 </div>
                 <div className='mt-20 flex flex-col items-center'>
-                    <Link to={'/signup'}>
+                    <Link to={'/'}>
                         <button className='border border-b-4 border-t-2 border-gray-300 text-gray-300 bg-black px-6 mb-8 py-1 text-center'>Connect Wallet</button>
                     </Link>
                     <img src={arrow} alt="down" />

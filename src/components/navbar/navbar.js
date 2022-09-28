@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import metaLogo from "../../assets/images/metaLogo.png"
 import { CgLogOff } from 'react-icons/cg'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -28,7 +29,7 @@ const Navbar = () => {
       </div>
       <div className=' hidden  text-gray-400 w-full md:flex justify-center'>
         <div className=' flex items-center w-min gap-4 md:gap-10 mr-20'>
-          <p>Home</p>
+          <Link to={'/'}><p className='cursor-pointer'>Home</p></Link> 
           <p>Services</p>
           <img src={metaLogo} alt='logo' />
           <p>About</p>
